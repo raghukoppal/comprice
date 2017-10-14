@@ -2,7 +2,9 @@ var proxy = require("express-http-proxy");
 var express = require("express");
 var app = express();
 var request = require("request");
+
 var r = request.defaults({
+    proxy: "http://T12449:%21Ilitap7tth@10.40.1.98:8080"
 });
 
 var requestOptions = {
@@ -16,10 +18,15 @@ const Panel = `
   <div style="width: 100%; height: 100%; background: gray;" ></div>
 `;
 
+app.use("/", express.static("static"));
+
 app.use("/scripts/", express.static("scripts"));
 
 app.get("/panel", (req, res) => {
   console.log(req);
+  if(!req.query.url){
+    res.sendfile('./static/panel.html', {root: './'});
+  };
   r.get(
     Object.assign({}, requestOptions, { url: req.query.url }),
     (error, data) => {
@@ -28,18 +35,22 @@ app.get("/panel", (req, res) => {
         let _html = html
           .replace(
             "</body>",
-            `
+            `            
+             <link rel="stylesheet" type="text/css" href="/scripts/vex.css" />
+             <link rel="stylesheet" type="text/css" href="/scripts/vex-theme-default.css" />
+             <link rel="stylesheet" type="text/css" href="/scripts/vex-theme-wireframe.css" />
+             <link rel="stylesheet" type="text/css" href="/scripts/vex-theme-os.css" />
+             <link rel="stylesheet" type="text/css" href="/scripts/vex-theme-plain.css" />
+             <link rel="stylesheet" type="text/css" href="/scripts/vex-theme-flat-attack.css" />
              <script src="/scripts/jquery-3.2.1.min.js" ></script>
-             <script src="/scripts/remodal.min.js" ></script>
+             <script src="/scripts/vex.combined.min.js" ></script>
+             <script>vex.defaultOptions.className = 'vex-theme-os'</script>
              <script src="/scripts/linkrewrite.js" ></script>
              <script src="/scripts/rulepicker.js" ></script>
              <script src="/scripts/panel.js" ></script>
              </body>
             `
-          )
-          .replace(/\<body (.+)\>/, function(match) {
-            return match + Panel;
-          });
+          );
 
         res.send(_html);
       } else {

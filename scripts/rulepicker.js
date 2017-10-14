@@ -1,6 +1,14 @@
-
 const capturePrice = element => {
-  
+  vex.dialog.confirm({
+    message: "Price " + $(element).text(),
+    callback: function(value) {
+      if (value) {
+        console.log("Successfully destroyed the planet.");
+      } else {
+        console.log("Chicken.");
+      }
+    }
+  });
 };
 
 $("html").append(
