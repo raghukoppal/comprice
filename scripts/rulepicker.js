@@ -1,14 +1,19 @@
 const capturePrice = element => {
-  vex.dialog.confirm({
-    message: "Price " + $(element).text(),
-    callback: function(value) {
-      if (value) {
-        console.log("Successfully destroyed the planet.");
-      } else {
-        console.log("Chicken.");
-      }
-    }
-  });
+  const ok = confirm("Price " + $(element).text());
+  if (ok) {
+    return $.ajax({
+      type: "POST",
+      url: "http://10.33.178.124:8006/Comprice/rest/Comprice/user/newAlert",
+      data: JSON.stringify({
+        price: $(element).text(),
+        productUrl: window.location.href.match(/url=(.+)/)[1],
+        site: window.location.href.match(/url=(.+)/)[1].match(/http:\/\/www\.(.+\.(com|in))/)[1],
+        email: "example@example.com"
+      }),
+      contentType: "application/json",
+      dataType: "json"
+    });
+  }
 };
 
 $("html").append(

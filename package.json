@@ -3,8 +3,12 @@
     "start": "node server"
   },
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "crawler": "^1.0.5",
     "express": "^4.16.2",
     "express-http-proxy": "^1.0.7",
+    "node-cron": "^1.2.1",
+    "pouchdb": "^6.3.4",
     "request": "^2.83.0"
   }
 }
