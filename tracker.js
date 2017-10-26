@@ -61,3 +61,7 @@ require("node-cron").schedule("* * * * *", function() {
     });
   });
 });
+
+modules.exports = {
+  addTracker: addTrackingRecord
+};
