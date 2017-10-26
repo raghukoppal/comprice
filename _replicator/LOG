@@ -1,0 +1,5 @@
+2017/10/15-22:15:52.635 10bc Recovering log #19
+2017/10/15-22:15:52.635 10bc Level-0 table #21: started
+2017/10/15-22:15:52.651 10bc Level-0 table #21: 287 bytes OK
+2017/10/15-22:15:52.674 10bc Delete type=0 #19
+2017/10/15-22:15:52.676 10bc Delete type=3 #17

@@ -1,0 +1,14 @@
+2017/10/26-16:31:39.281 22b0 Recovering log #77
+2017/10/26-16:31:39.281 22b0 Level-0 table #79: started
+2017/10/26-16:31:39.283 22b0 Level-0 table #79: 237 bytes OK
+2017/10/26-16:31:39.296 22b0 Delete type=0 #77
+2017/10/26-16:31:39.296 22b0 Delete type=3 #75
+2017/10/26-16:31:39.301 2ec8 Compacting 4@0 + 1@1 files
+2017/10/26-16:31:39.316 2ec8 Generated table #81@0: 19 keys, 2712 bytes
+2017/10/26-16:31:39.316 2ec8 Compacted 4@0 + 1@1 files => 2712 bytes
+2017/10/26-16:31:39.318 2ec8 compacted to: files[ 0 1 0 0 0 0 0 ]
+2017/10/26-16:31:39.318 2ec8 Delete type=2 #68
+2017/10/26-16:31:39.318 2ec8 Delete type=2 #70
+2017/10/26-16:31:39.318 2ec8 Delete type=2 #73
+2017/10/26-16:31:39.321 2ec8 Delete type=2 #76
+2017/10/26-16:31:39.321 2ec8 Delete type=2 #79

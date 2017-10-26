@@ -1,0 +1,5 @@
+2017/10/15-22:15:52.739 15ec Recovering log #19
+2017/10/15-22:15:52.739 15ec Level-0 table #21: started
+2017/10/15-22:15:52.754 15ec Level-0 table #21: 287 bytes OK
+2017/10/15-22:15:52.807 15ec Delete type=0 #19
+2017/10/15-22:15:52.808 15ec Delete type=3 #17

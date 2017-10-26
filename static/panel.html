@@ -1,47 +1,78 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 
-  <title>The HTML5 Herald</title>
-  <meta name="description" content="Comprice">
-  <meta name="Comprice" content="Comprice">
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="Comprice">
+    <meta name="Comprice" content="Comprice">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
-  <style>
-    .message {
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        font-size: 16px;
-    }
-    .websites {
-        height: 100px;
-        width: 500px;
-        padding: 20px;
-        border: 1px solid #e5e5e5;
-        display: grid;
-        
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-gap: 20px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-    }
- .websites > div {
-     text-align: center;
- }
-  </style>
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <style>
+
+
+        .websites {
+            height: 100px;
+            width: 500px;
+            padding: 20px;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .websites > form {
+                        position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
 </head>
 
 <body>
-    <div class="websites" >
-       <div> <a href="/panel?url=https://www.ebay.in" > Ebay </a></div>
-       <div> <a href="/panel?url=https://www.ebay.in" >Snapdeal </a></div>
-       <div> <a href="/panel?url=https://www.ebay.in" >Amazon </a></div>
-       <div><a href="/panel?url=https://www.ebay.in" > Flipkart </a></div>
-    </div> 
+    <div class="websites">
+        <!-- Event card -->
+        <style>
+            .demo-card-event.mdl-card {
+                width: 100%;
+            }
+
+        </style>
+
+        <div class="demo-card-event mdl-card mdl-shadow--2dp">
+             <div class="mdl-card__title" style="text-align: center" >
+      <h4 style="text-align: center"  class="mdl-card__title-text mdl-color-text--blue-grey">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           Enter Tracking information </h4>
+  </div>
+<center>            <form action="/panel">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="sample3" name="product" required>
+                    <label class="mdl-textfield__label" for="sample3"> Product name </label>
+                </div>
+                <br>
+                <br>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="sample3" name="url" required>
+                    <label class="mdl-textfield__label" for="sample3"> Website exaple https://www.ebay.in</label>
+                </div>
+                <br>
+                <br>
+                <input class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" type="submit" value="Start Capturing" />
+        <br>
+                <br>
+            </form>
+</center>
+        </div>
+
+
+    </div>
+                 <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
 </body>
+
 </html>
